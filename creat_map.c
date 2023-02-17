@@ -6,7 +6,7 @@
 /*   By: yel-aoun <yel-aoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 08:56:04 by yel-aoun          #+#    #+#             */
-/*   Updated: 2023/01/29 17:24:58 by yel-aoun         ###   ########.fr       */
+/*   Updated: 2023/02/04 18:50:23 by yel-aoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_textures_data_addr(t_data *data, t_let *let)
 		let->ea, &add->e.img_w, &add->e.img_h);
 	if (!add->n.xpm || !add->s.xpm || !add->w.xpm || !add->e.xpm)
 	{
-		printf("Error : textures files doesn't exist");
+		printf("Error : textures files doesn't exist\n");
 		exit(0);
 	}
 	ft_add(add);

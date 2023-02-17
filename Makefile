@@ -6,11 +6,11 @@
 #    By: yel-aoun <yel-aoun@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 08:13:34 by yel-aoun          #+#    #+#              #
-#    Updated: 2023/01/30 14:30:21 by yel-aoun         ###   ########.fr        #
+#    Updated: 2023/02/05 22:48:47 by yel-aoun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cub3d
+NAME = cub3D
 # NAME_BONUS = cub3d_bonus
 
 SRCS = main.c cub3d.c creat_map.c ft_move.c \
@@ -26,8 +26,7 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 CFLAGS =   -Wall -Wextra -Werror
 
-MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit -fsanitize=address
-
+MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit 
 all: $(NAME)
 
 %.o: %.c

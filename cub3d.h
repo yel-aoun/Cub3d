@@ -6,7 +6,7 @@
 /*   By: yel-aoun <yel-aoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 08:11:58 by yel-aoun          #+#    #+#             */
-/*   Updated: 2023/01/29 17:23:21 by yel-aoun         ###   ########.fr       */
+/*   Updated: 2023/02/05 21:25:27 by yel-aoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,5 +157,6 @@ char	*find_map(char *v);
 int		ft_calcul_fc(int first, int second, int third);
 void	ft_check_path(char *v, t_let **let);
 void	ft_check_eror(char **str);
+char	**ft_cpy(char **split);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: yel-aoun <yel-aoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 08:12:01 by yel-aoun          #+#    #+#             */
-/*   Updated: 2023/01/30 12:39:04 by yel-aoun         ###   ########.fr       */
+/*   Updated: 2023/02/05 15:19:32 by yel-aoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int	ft_exit(t_data *data)
 int	ft_key_hook(t_data *data)
 {
 	mlx_clear_window(data->mlx, data->win);
-	mlx_destroy_image(data->mlx, data->_img);
-	data->_img = mlx_new_image(data->mlx, WIN_W, WIN_H);
 	data->addr = mlx_get_data_addr(data->_img, &data->pxl, \
 		&data->len, &data->endian);
 	if (data->keystat[0])
@@ -35,9 +33,9 @@ int	ft_key_hook(t_data *data)
 	if (data->keystat[3])
 		ft_move(data, 90);
 	if (data->keystat[4])
-		data->angle += 3;
+		data->angle += 4;
 	if (data->keystat[5])
-		data->angle -= 3;
+		data->angle -= 4;
 	ft_draw_img(data);
 	mlx_put_image_to_window(data->mlx, data->win, data->_img, 0, 0);
 	return (0);

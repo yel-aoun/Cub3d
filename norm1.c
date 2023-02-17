@@ -6,7 +6,7 @@
 /*   By: yel-aoun <yel-aoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:58:35 by araysse           #+#    #+#             */
-/*   Updated: 2023/01/27 14:45:34 by yel-aoun         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:10:52 by yel-aoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,8 @@ void	ft_check_path(char *v, t_let **let)
 	i = 0;
 	j = 0;
 	v = find_map(v);
+	if (v == NULL)
+		ft_eror(1);
 	_path(v, i);
 	split = ft_split(v, '\n');
 	ft_check_space(split);
